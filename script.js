@@ -283,5 +283,56 @@ function initProjectsWheelSlider() {
   updateProjectsNavState();
 }
 
+function initCopyContacts() {
+  const copyLinks = Array.from(document.querySelectorAll("[data-copy]"));
+
+  if (copyLinks.length === 0) {
+    return;
+  }
+
+  const setCopiedState = (element, label) => {
+    const originalLabel = element.dataset.originalLabel || element.textContent;
+    element.dataset.originalLabel = originalLabel;
+    element.classList.add("is-copied");
+    element.textContent = label;
+
+    window.setTimeout(() => {
+      element.classList.remove("is-copied");
+      element.textContent = element.dataset.originalLabel || originalLabel;
+    }, 1400);
+  };
+
+  copyLinks.forEach((link) => {
+    link.addEventListener("click", async (event) => {
+      event.preventDefault();
+
+      const valueToCopy = link.dataset.copy;
+
+      if (!valueToCopy) {
+        return;
+      }
+
+      try {
+        await navigator.clipboard.writeText(valueToCopy);
+        setCopiedState(link, link.dataset.copyLabel || "Скопировано");
+      } catch (error) {
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(link);
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        try {
+          document.execCommand("copy");
+          setCopiedState(link, link.dataset.copyLabel || "Скопировано");
+        } finally {
+          selection.removeAllRanges();
+        }
+      }
+    });
+  });
+}
+
 initThemeToggle();
 initProjectsWheelSlider();
+initCopyContacts();
