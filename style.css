@@ -693,6 +693,18 @@ body.dark .contacts__card {
   line-height: 1.18;
 }
 
+.project-detail__text a {
+  text-decoration: none;
+  transition: opacity 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.project-detail__text a:hover,
+.project-detail__text a:focus-visible {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.12em;
+}
+
 .project-gallery {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
