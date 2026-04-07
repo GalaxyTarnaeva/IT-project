@@ -578,6 +578,16 @@ body.dark .toggle-circle {
   font-size: 40px;
   line-height: 1;
   color: var(--contact-text);
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.contact-row a:hover,
+.contact-row a:focus-visible {
+  color: var(--accent);
+}
+
+.contact-row a.is-copied {
+  color: var(--accent);
 }
 
 .contacts__note {
