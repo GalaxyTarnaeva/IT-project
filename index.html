@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahonya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar__inner">
+      <a class="logo" href="#top">MAHONYA</a>
+
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Переключить тему">
+        <span class="toggle-circle"></span>
+      </button>
+
+      <div class="menu">
+        <a href="#top">Главная</a>
+        <a href="#about">Обо мне</a>
+        <a href="#projects">Проекты</a>
+        <a href="#contacts">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <img class="hero__image" src="img/хэдер.png" data-asset="хэдер.png" alt="">
+  </header>
+
+  <main>
+    <section class="about" id="about">
+      <div class="about__grid">
+        <div class="about__photo">
+          <img src="img/мое_фото.png" data-asset="мое_фото.png" alt="Мария Тарнаева">
+        </div>
+
+        <div class="about__content">
+          <h2>
+            ТВОРЧЕСКИЙ<br>
+            ПОДХОД<br>
+            К РЕШЕНИЮ<br>
+            ЗАДАЧ
+          </h2>
+
+          <div class="tags">
+            <div class="tag tag--one">Материалы для социальных сетей</div>
+            <div class="tag tag--two">Разработка фирменного стиля</div>
+            <div class="tag tag--three">Гайдлайны, брендбуки</div>
+          </div>
+
+          <p class="about-text">
+            Привет! Меня зовут Мария Тарнаева, занимаюсь разработкой фирменного стиля и брендинга,
+            создаю упаковку, иллюстрации и визуальные материалы для социальных сетей.
+          </p>
+
+          <p class="about-text">
+            Образование: бакалавриат «Прикладная информатика в дизайне», Промтехдизайн.
+          </p>
+
+          <h3 class="programs-title">ПРОГРАММЫ</h3>
+
+          <div class="programs">
+            <img src="img/программы.png" data-asset="программы.png" alt="Список программ">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee" aria-label="Бегущая строка">
+      <div class="marquee__inner">
+        <div class="marquee__content">
+          <span>ФИРМЕННЫЙ СТИЛЬ</span>
+          <span>ФИРМЕННЫЙ СТИЛЬ</span>
+          <span>ФИРМЕННЫЙ СТИЛЬ</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <div class="projects__inner">
+        <div class="projects__bg" aria-hidden="true">
+          <span>ROJECTS ПРОЕКТЫ PROJECTS ПРОЕКТЫ</span>
+          <span>ТЫ PROJECTS ПРОЕ ТЫ PROJECTS ПРОЕ</span>
+          <span>ПРОЕКТЫ PROJECTS ПРОЕКТЫ PROJECTS</span>
+          <span>ТЫ PROJECTS ПРОЕ ТЫ PROJECTS ПРОЕ</span>
+          <span>ROJECTS ПРОЕКТЫ PROJECTS ПРОЕКТЫ</span>
+        </div>
+
+        <div class="projects__controls" aria-label="Навигация по проектам">
+          <button class="projects__nav" id="projectsPrev" type="button" aria-label="Показать предыдущий проект">←</button>
+          <button class="projects__nav" id="projectsNext" type="button" aria-label="Показать следующий проект">→</button>
+        </div>
+
+        <div class="projects__viewport" id="projectsViewport" tabindex="0">
+          <div class="projects__track">
+            <a class="project-card" href="project-1.html" aria-label="Открыть проект Розовый магазин PINK">
+              <img
+                class="project-card__image"
+                src="img/Проект1_1.png"
+                data-asset="Проект1_1.png"
+                alt="Розовый магазин PINK"
+              >
+              <div class="project-card__meta">
+                <span class="project-card__index">Проект 01</span>
+                <h3 class="project-card__title">Розовый магазин "PINK"</h3>
+                <p class="project-card__year">2023</p>
+              </div>
+            </a>
+            <a class="project-card" href="project-2.html" aria-label="Открыть проект брендинга Егоза">
+              <img
+                class="project-card__image"
+                src="img/Проект2_1.png"
+                data-asset="Проект2_1.png"
+                alt="Брендинг для компании Егоза"
+              >
+              <div class="project-card__meta">
+                <span class="project-card__index">Проект 02</span>
+                <h3 class="project-card__title">Брендинг "Егоза"</h3>
+                <p class="project-card__year">2025</p>
+              </div>
+            </a>
+            <a class="project-card" href="project-3.html" aria-label="Открыть проект MyDesignTime">
+              <img
+                class="project-card__image"
+                src="img/Проект3_1.png"
+                data-asset="Проект3_1.png"
+                alt="Фирменный стиль для конференции MyDesignTime"
+              >
+              <div class="project-card__meta">
+                <span class="project-card__index">Проект 03</span>
+                <h3 class="project-card__title">Конференция "MyDesignTime"</h3>
+                <p class="project-card__year">2025</p>
+              </div>
+            </a>
+            <a class="project-card" href="project-4.html" aria-label="Открыть проект СмартПикник">
+              <img
+                class="project-card__image"
+                src="img/Проект4_1.png"
+                data-asset="Проект4_1.png"
+                alt="Фирменный стиль фестиваля СмартПикник"
+              >
+              <div class="project-card__meta">
+                <span class="project-card__index">Проект 04</span>
+                <h3 class="project-card__title">Фестиваль "СмартПикник"</h3>
+                <p class="project-card__year">2025</p>
+              </div>
+            </a>
+            <a class="project-card" href="project-5.html" aria-label="Открыть проект BegYStart">
+              <img
+                class="project-card__image"
+                src="img/Проект5_1.png"
+                data-asset="Проект5_1.png"
+                alt="Фирменный стиль акселератора школьных проектов BegYStart"
+              >
+              <div class="project-card__meta">
+                <span class="project-card__index">Проект 05</span>
+                <h3 class="project-card__title">BegYStart</h3>
+                <p class="project-card__year">2024</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+      <div class="contacts__inner">
+        <div class="section-head section-head--contacts">
+          <h2>Контакты</h2>
+        </div>
+
+        <div class="contacts__layout">
+          <div class="contacts__card">
+            <div class="contact-row">
+              <img class="contact-row__icon" src="img/иконка_тел.png" data-asset="иконка_тел.png" alt="">
+              <a href="tel:+79115691946">+7 (911) 569 - 19 - 46</a>
+            </div>
+
+            <div class="contact-row">
+              <img class="contact-row__icon" src="img/иконка_почта.png" data-asset="иконка_почта.png" alt="">
+              <a href="mailto:tarnaevamariagal@gmail.com">tarnaevamariagal@gmail.com</a>
+            </div>
+
+            <div class="contact-row">
+              <img class="contact-row__icon" src="img/иконка_тг.png" data-asset="иконка_тг.png" alt="">
+              <a href="https://t.me/GalaxyMaria" target="_blank" rel="noreferrer">@GalaxyMaria</a>
+            </div>
+
+            <div class="contact-row">
+              <img class="contact-row__icon" src="img/иконка_вк.png" data-asset="иконка_вк.png" alt="">
+              <a href="https://vk.com/galaxytmp" target="_blank" rel="noreferrer">galaxytmp</a>
+            </div>
+
+            <p class="contacts__note">*Запрещено в РФ</p>
+          </div>
+
+          <div class="contacts__image">
+            <img src="img/телефон.png" data-asset="телефон.png" alt="Декоративное изображение телефона">
+          </div>
+
+          <img
+            class="contacts__graphic"
+            src="img/граф_элементы.png"
+            data-asset="граф_элементы.png"
+            alt=""
+          >
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
